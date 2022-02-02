@@ -1,5 +1,6 @@
 # Open CV OAKD Streaming from Raspberry Pi
 
+Credit: Heavily based on code from [depthai-experiments](https://github.com/luxonis/depthai-experiments/tree/master/gen2-mjpeg-streaming).
 
 ## Install Steps:
 

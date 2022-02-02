@@ -225,7 +225,8 @@ with dai.Device(dai.OpenVINO.Version.VERSION_2021_2) as device:
                 cv2.putText(frame, f"Z: {int(detection.spatialCoordinates.z)} mm", (x1 + 10, y1 + 80), cv2.FONT_HERSHEY_TRIPLEX, 0.5, color)
 
             cv2.rectangle(frame, (x1, y1), (x2, y2), color, cv2.FONT_HERSHEY_SIMPLEX)
-            server_TCP.datatosend = str(label) + "," + f"{int(detection.confidence * 100)}%"
+            coordinate_string = ",".join([str(int(x)) for x in [detection.spatialCoordinates.x,detection.spatialCoordinates.y,detection.spatialCoordinates.z]])
+            server_TCP.datatosend = str(label) + "," + f"{int(detection.confidence * 100)}%" + "," + coordinate_string
 
 
         cv2.putText(frame, "NN fps: {:.2f}".format(fps), (2, frame.shape[0] - 4), cv2.FONT_HERSHEY_TRIPLEX, 0.4, color)
