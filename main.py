@@ -25,9 +25,9 @@ class TCPServerRequest(socketserver.BaseRequestHandler):
         # When OpenDataCam connects, do not return - instead keep the connection open and keep streaming data
         # First send HTTP header
         header = 'HTTP/1.0 200 OK\r\nServer: Mozarella/2.2\r\nAccept-Range: bytes\r\nConnection: close\r\nMax-Age: 0\r\nExpires: 0\r\nCache-Control: no-cache, private\r\nPragma: no-cache\r\nContent-Type: application/json\r\n\r\n'
-        self.request.send(header.encode())
+        # self.request.send(header.encode())
         while True:
-            sleep(0.1)
+            # sleep(0.1)
             if hasattr(self.server, 'datatosend'):
                 self.request.send(self.server.datatosend.encode() + "\r\n".encode())
 
