@@ -6,9 +6,12 @@ Streams video feed of detections + depth mask over HTTP, and the detected object
 
 ## Install Steps:
 
-1. Setup virtualenv within desired project folder
+Prerequisites:
+- Clone the repo - follow instructions from root of the repo.
 
-	`$ python3 virtualenv venv`
+1. Setup virtualenv within cloned repo folder
+
+	`$ python3 -m venv venv`
 
 2. Activate virtual env:
 
