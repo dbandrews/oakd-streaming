@@ -19,7 +19,7 @@ Prerequisites:
 
 3. Install system dependencies (for Raspbian Bullseye, ARM7L) (Undocumented on DepthAI website?):
 
-	`$ sudo apt-get python3-h5py libatlas-base-dev`
+	`$ sudo apt-get install python3-h5py libatlas-base-dev`
 
 4. Install requirements:
 
